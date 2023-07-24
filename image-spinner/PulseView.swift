@@ -17,6 +17,7 @@ import SwiftUI
 
 struct Pulse: View {
     @ObservedObject var viewModel: PulseViewModel
+    @State var showSheet: Bool = false
     
     init(viewModel: PulseViewModel) {
         self.viewModel = viewModel
@@ -24,15 +25,28 @@ struct Pulse: View {
     
     var body: some View {
         
-        Image(viewModel.imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: viewModel.width, height: viewModel.width)
-            .onAppear {
-                withAnimation(.easeInOut.repeatForever(autoreverses: true).speed(viewModel.speed)) {
-                    viewModel.width = viewModel.minWidth
+        VStack {
+            Spacer()
+            Image(viewModel.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: viewModel.width, height: viewModel.width)
+                .onAppear {
+                    withAnimation(.easeInOut.repeatForever(autoreverses: true).speed(viewModel.speed)) {
+                        viewModel.width = viewModel.minWidth
+                    }
                 }
+            Spacer()
+            Button(action: {
+                self.showSheet.toggle()
+            }) {
+                Text("Show Code")
             }
+            .sheet(isPresented: $showSheet) {
+                Text(viewModel.getCode())
+                    .font(.system(size: 10, weight: .bold, design: .monospaced))
+            }
+        }
     }
 }
 

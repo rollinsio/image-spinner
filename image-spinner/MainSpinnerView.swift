@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct MainSpinnerView: View {
-    @ObservedObject var viewModel = PulseViewModel(imageName: "squareLogo")
-    @State var showSheet: Bool = false
     
     let views = [Pulse(viewModel: PulseViewModel(imageName: "squareLogo")),
                  Pulse(viewModel: PulseViewModel(imageName: "dragon")),
@@ -20,32 +18,13 @@ struct MainSpinnerView: View {
         
         VStack {
             TabView {
-                ForEach(0..<3) { i in
+                ForEach(0..<views.count,id:\.self) { i in
                     views[i]
-                        .padding()
+                        .tag(i)
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         }
-        
-//        GeometryReader { geometry in
-//            VStack {
-//                Pulse(viewModel: viewModel)
-//                    .frame(width: geometry.size.width, height: geometry.size.height * 0.9)
-//
-//                Button(action: {
-//                    self.showSheet.toggle()
-//                }) {
-//                    Text("Show Code")
-//                }
-//                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.1)
-//            }
-//            .sheet(isPresented: $showSheet) {
-//                Text(viewModel.getCode())
-//                    .font(.system(size: 10, weight: .bold, design: .monospaced))
-//            }
-//        }
     }
         
 
