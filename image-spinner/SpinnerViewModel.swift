@@ -10,5 +10,4 @@ import SwiftUI
 
 protocol SpinnerViewModel {
     func getCode() -> String
-    func generateView() -> any View
 }

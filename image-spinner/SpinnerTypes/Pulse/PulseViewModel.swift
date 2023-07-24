@@ -22,7 +22,7 @@ class PulseViewModel: SpinnerViewModel, ObservableObject {
     }
     
     func generateView() -> any View {
-        return Pulse(viewModel: self)
+        return PulseView(viewModel: self)
     }
 
     func getCode() -> String {
@@ -35,9 +35,12 @@ Image(viewModel.imageName)
     .aspectRatio(contentMode: .fit)
     .frame(width: viewModel.width, height: viewModel.width)
     .onAppear {
-        withAnimation(.easeInOut.repeatForever(autoreverses: true).speed(viewModel.speed)) {
-            viewModel.width = viewModel.minWidth
-        }
+        withAnimation(
+            .easeInOut
+            .repeatForever(autoreverses: true)
+            .speed(viewModel.speed)) {
+                viewModel.width = viewModel.minWidth
+            }
     }
 """
         
