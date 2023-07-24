@@ -10,7 +10,6 @@ import SwiftUI
 struct MainSpinnerView: View {
     
     let views = [Pulse(viewModel: PulseViewModel(imageName: "squareLogo")),
-                 Pulse(viewModel: PulseViewModel(imageName: "dragon")),
                  Pulse(viewModel: PulseViewModel(imageName: "dragonFull"))
     ]
     

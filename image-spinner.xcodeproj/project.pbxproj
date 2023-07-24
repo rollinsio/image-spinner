@@ -17,6 +17,8 @@
 		77069B132A6AC8DC00C66FF6 /* PulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B122A6AC8DC00C66FF6 /* PulseView.swift */; };
 		77069B152A6ACAA200C66FF6 /* PulseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B142A6ACAA200C66FF6 /* PulseViewModel.swift */; };
 		77069B172A6ACE1D00C66FF6 /* SpinnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B162A6ACE1D00C66FF6 /* SpinnerViewModel.swift */; };
+		77069B202A6EB27A00C66FF6 /* RotateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B1F2A6EB27A00C66FF6 /* RotateView.swift */; };
+		77069B222A6EB28700C66FF6 /* RotateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B212A6EB28700C66FF6 /* RotateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		77069B122A6AC8DC00C66FF6 /* PulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseView.swift; sourceTree = "<group>"; };
 		77069B142A6ACAA200C66FF6 /* PulseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseViewModel.swift; sourceTree = "<group>"; };
 		77069B162A6ACE1D00C66FF6 /* SpinnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewModel.swift; sourceTree = "<group>"; };
+		77069B1F2A6EB27A00C66FF6 /* RotateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateView.swift; sourceTree = "<group>"; };
+		77069B212A6EB28700C66FF6 /* RotateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		77069B1C2A6EB1F000C66FF6 /* SpinnerTypes */ = {
 			isa = PBXGroup;
 			children = (
+				77069B1E2A6EB26A00C66FF6 /* Rotate */,
 				77069B1D2A6EB1F900C66FF6 /* Pulse */,
 			);
 			path = SpinnerTypes;
@@ -150,6 +155,15 @@
 				77069B142A6ACAA200C66FF6 /* PulseViewModel.swift */,
 			);
 			path = Pulse;
+			sourceTree = "<group>";
+		};
+		77069B1E2A6EB26A00C66FF6 /* Rotate */ = {
+			isa = PBXGroup;
+			children = (
+				77069B1F2A6EB27A00C66FF6 /* RotateView.swift */,
+				77069B212A6EB28700C66FF6 /* RotateViewModel.swift */,
+			);
+			path = Rotate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77069B222A6EB28700C66FF6 /* RotateViewModel.swift in Sources */,
 				77069B132A6AC8DC00C66FF6 /* PulseView.swift in Sources */,
 				77069B172A6ACE1D00C66FF6 /* SpinnerViewModel.swift in Sources */,
 				77069AE72A6AC81500C66FF6 /* image_spinnerApp.swift in Sources */,
+				77069B202A6EB27A00C66FF6 /* RotateView.swift in Sources */,
 				77069B112A6AC88F00C66FF6 /* MainSpinnerView.swift in Sources */,
 				77069B152A6ACAA200C66FF6 /* PulseViewModel.swift in Sources */,
 			);
