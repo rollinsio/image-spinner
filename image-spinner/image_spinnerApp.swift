@@ -11,7 +11,8 @@ import SwiftUI
 struct image_spinnerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            MainSpinnerView()
         }
     }
 }
