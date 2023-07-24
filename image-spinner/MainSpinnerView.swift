@@ -22,7 +22,10 @@ struct MainSpinnerView: View {
                         } else if viewModel.viewModels[i] is RotateViewModel {
                             RotateView(viewModel: viewModel.viewModels[i] as! RotateViewModel)
                                 .tag(i)
+                        } else if viewModel.viewModels[i] is IntermittentRotateViewModel {
+                            IntermittentRotateView(viewModel: viewModel.viewModels[i] as! IntermittentRotateViewModel)
                         }
+    
                     }
                 }
             }
