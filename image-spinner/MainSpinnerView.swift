@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct MainSpinnerView: View {
-    
-    let views = [Pulse(viewModel: PulseViewModel(imageName: "squareLogo")),
-                 Pulse(viewModel: PulseViewModel(imageName: "dragon")),
-                 Pulse(viewModel: PulseViewModel(imageName: "dragonFull"))
-    ]
+    @ObservedObject var viewModel: MainSpinnerViewModel = MainSpinnerViewModel()
     
     var body: some View {
         
         VStack {
             TabView {
-                ForEach(0..<views.count,id:\.self) { i in
-                    views[i]
-                        .tag(i)
+                Group {
+                    ForEach(0..<viewModel.viewModels.count,id:\.self) { i in
+                        if viewModel.viewModels[i] is PulseViewModel {
+                            Pulse(viewModel: viewModel.viewModels[i] as! PulseViewModel)
+                                .tag(i)
+                        } else if viewModel.viewModels[i] is RotateViewModel {
+                            RotateView(viewModel: viewModel.viewModels[i] as! RotateViewModel)
+                                .tag(i)
+                        }
+                    }
                 }
             }
             .tabViewStyle(PageTabViewStyle())
