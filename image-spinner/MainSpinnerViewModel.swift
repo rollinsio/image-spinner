@@ -11,6 +11,7 @@ import SwiftUI
 class MainSpinnerViewModel: ObservableObject {
     @Published var viewModels: [SpinnerViewModel] = [
         PulseViewModel(imageName: "squareLogo"),
-        RotateViewModel(imageName: "dragonFull")
+        RotateViewModel(imageName: "dragonFull"),
+        IntermittentRotateViewModel(imageName: "dragon")
     ]
 }
