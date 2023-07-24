@@ -5,17 +5,9 @@
 //  Created by Michael Rollins on 7/18/23.
 //
 
-// This is simply a fun little loading animation. I was really close to making
-// it Jack's face, but I thought maybe that would be one bridge too far. I can
-// pretty much assure you that if you used Steve Jobs as a loading animation
-// for an Apple take-home they would very much not be happy.
-// If you've gotten this far, remind me to tell you about how Flurry leaked the
-// iPad and Steve personally gave our CEO a phone call, then banned all
-// analytics SDKs for a few months. Those times were lit!
-
 import SwiftUI
 
-struct Pulse: View {
+struct PulseView: View {
     @ObservedObject var viewModel: PulseViewModel
     @State var showSheet: Bool = false
     
@@ -53,6 +45,6 @@ struct Pulse: View {
 struct SquarePulse_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = PulseViewModel(imageName: "squareLogo")
-        Pulse(viewModel: viewModel)
+        PulseView(viewModel: viewModel)
     }
 }
