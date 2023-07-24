@@ -23,7 +23,6 @@ struct RotateView: View {
                 .aspectRatio(contentMode: .fit)
                 .rotationEffect(Angle.degrees(viewModel.degrees), anchor: .center)
                 .frame(width: viewModel.width, height: viewModel.width)
-
                 .onAppear {
                     withAnimation(.linear(duration: viewModel.speed).repeatForever(autoreverses: false)) {
                         viewModel.degrees = 1.truncatingRemainder(dividingBy: 360)

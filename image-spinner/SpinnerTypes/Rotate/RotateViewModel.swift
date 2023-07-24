@@ -14,7 +14,7 @@ class RotateViewModel: SpinnerViewModel, ObservableObject {
     @Published var speed: Double
     @Published var degrees: Double
     
-    init(imageName: String, width: CGFloat = 200, speed: Double = 0.75, degrees: Double = 360) {
+    init(imageName: String, width: CGFloat = 200, speed: Double = 0.8, degrees: Double = 360) {
         self.imageName = imageName
         self.width = width
         self.speed = speed
@@ -26,6 +26,18 @@ class RotateViewModel: SpinnerViewModel, ObservableObject {
     }
     
     func getCode() -> String {
-        return "Rotate"
+        return
+"""
+Image(viewModel.imageName)
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+    .rotationEffect(Angle.degrees(viewModel.degrees), anchor: .center)
+    .frame(width: viewModel.width, height: viewModel.width)
+    .onAppear {
+        withAnimation(.linear(duration: viewModel.speed).repeatForever(autoreverses: false)) {
+            viewModel.degrees = 1.truncatingRemainder(dividingBy: 360)
+        }
+    }
+"""
     }
 }
