@@ -18,8 +18,10 @@ struct MainSpinnerView: View {
                     ForEach(0..<viewModel.viewModels.count,id:\.self) { i in
                         if viewModel.viewModels[i] is PulseViewModel {
                             Pulse(viewModel: viewModel.viewModels[i] as! PulseViewModel)
+                                .tag(i)
                         } else if viewModel.viewModels[i] is RotateViewModel {
                             RotateView(viewModel: viewModel.viewModels[i] as! RotateViewModel)
+                                .tag(i)
                         }
                     }
                 }

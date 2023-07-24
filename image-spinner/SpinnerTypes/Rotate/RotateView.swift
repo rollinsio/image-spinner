@@ -16,27 +16,29 @@ struct RotateView: View {
     }
     
     var body: some View {
-        Spacer()
-        Image(viewModel.imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .rotationEffect(Angle.degrees(viewModel.degrees), anchor: .center)
-            .frame(width: viewModel.width, height: viewModel.width)
+        VStack {
+            Spacer()
+            Image(viewModel.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .rotationEffect(Angle.degrees(viewModel.degrees), anchor: .center)
+                .frame(width: viewModel.width, height: viewModel.width)
 
-            .onAppear {
-                withAnimation(.linear(duration: viewModel.speed).repeatForever(autoreverses: false)) {
-                    viewModel.degrees = 1.truncatingRemainder(dividingBy: 360)
+                .onAppear {
+                    withAnimation(.linear(duration: viewModel.speed).repeatForever(autoreverses: false)) {
+                        viewModel.degrees = 1.truncatingRemainder(dividingBy: 360)
+                    }
                 }
+            Spacer()
+            Button(action: {
+                self.showSheet.toggle()
+            }) {
+                Text("Show Code")
             }
-        Spacer()
-        Button(action: {
-            self.showSheet.toggle()
-        }) {
-            Text("Show Code")
-        }
-        .sheet(isPresented: $showSheet) {
-            Text(viewModel.getCode())
-                .font(.system(size: 10, weight: .bold, design: .monospaced))
+            .sheet(isPresented: $showSheet) {
+                Text(viewModel.getCode())
+                    .font(.system(size: 10, weight: .bold, design: .monospaced))
+            }
         }
     }
 }
