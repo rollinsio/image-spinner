@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class RotateViewModel: SpinnerViewModel, ObservableObject {
     @Published var imageName: String
@@ -18,6 +19,10 @@ class RotateViewModel: SpinnerViewModel, ObservableObject {
         self.width = width
         self.speed = speed
         self.degrees = degrees 
+    }
+    
+    func generateView() -> any View {
+        return RotateView(viewModel: self)
     }
     
     func getCode() -> String {

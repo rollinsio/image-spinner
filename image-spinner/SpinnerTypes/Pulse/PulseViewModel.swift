@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PulseViewModel: SpinnerViewModel, ObservableObject {
     @Published var imageName: String
@@ -18,6 +19,10 @@ class PulseViewModel: SpinnerViewModel, ObservableObject {
         self.width = width
         self.minWidth = minWidth
         self.speed = speed
+    }
+    
+    func generateView() -> any View {
+        return Pulse(viewModel: self)
     }
 
     func getCode() -> String {

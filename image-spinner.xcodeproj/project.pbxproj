@@ -19,6 +19,7 @@
 		77069B172A6ACE1D00C66FF6 /* SpinnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B162A6ACE1D00C66FF6 /* SpinnerViewModel.swift */; };
 		77069B202A6EB27A00C66FF6 /* RotateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B1F2A6EB27A00C66FF6 /* RotateView.swift */; };
 		77069B222A6EB28700C66FF6 /* RotateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B212A6EB28700C66FF6 /* RotateViewModel.swift */; };
+		77069B242A6ECAD400C66FF6 /* MainSpinnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77069B232A6ECAD400C66FF6 /* MainSpinnerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		77069B162A6ACE1D00C66FF6 /* SpinnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewModel.swift; sourceTree = "<group>"; };
 		77069B1F2A6EB27A00C66FF6 /* RotateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateView.swift; sourceTree = "<group>"; };
 		77069B212A6EB28700C66FF6 /* RotateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateViewModel.swift; sourceTree = "<group>"; };
+		77069B232A6ECAD400C66FF6 /* MainSpinnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSpinnerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				77069AEC2A6AC81700C66FF6 /* Preview Content */,
 				77069B102A6AC88F00C66FF6 /* MainSpinnerView.swift */,
 				77069B162A6ACE1D00C66FF6 /* SpinnerViewModel.swift */,
+				77069B232A6ECAD400C66FF6 /* MainSpinnerViewModel.swift */,
 			);
 			path = "image-spinner";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				77069B172A6ACE1D00C66FF6 /* SpinnerViewModel.swift in Sources */,
 				77069AE72A6AC81500C66FF6 /* image_spinnerApp.swift in Sources */,
 				77069B202A6EB27A00C66FF6 /* RotateView.swift in Sources */,
+				77069B242A6ECAD400C66FF6 /* MainSpinnerViewModel.swift in Sources */,
 				77069B112A6AC88F00C66FF6 /* MainSpinnerView.swift in Sources */,
 				77069B152A6ACAA200C66FF6 /* PulseViewModel.swift in Sources */,
 			);
