@@ -12,6 +12,8 @@ class MainSpinnerViewModel: ObservableObject {
     @Published var viewModels: [SpinnerViewModel] = [
         PulseViewModel(imageName: "squareLogo"),
         RotateViewModel(imageName: "dragonFull"),
-        IntermittentRotateViewModel(imageName: "dragon")
+        IntermittentRotateViewModel(imageName: "dragon"),
+        ChasingSpinnerViewModel()
+    
     ]
 }

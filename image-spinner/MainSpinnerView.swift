@@ -24,6 +24,11 @@ struct MainSpinnerView: View {
                                 .tag(i)
                         } else if viewModel.viewModels[i] is IntermittentRotateViewModel {
                             IntermittentRotateView(viewModel: viewModel.viewModels[i] as! IntermittentRotateViewModel)
+                                .tag(i)
+                        } else if viewModel.viewModels[i] is ChasingSpinnerViewModel {
+                            ChasingSpinnerView(viewModel: viewModel.viewModels[i] as! ChasingSpinnerViewModel)
+                                .tag(i)
+                        
                         }
     
                     }
